@@ -1,6 +1,6 @@
-# feathers-crud
+# feathers-relay
 
-> Crud for Questions
+> feathers-relay is an experimental Relay on Feathers/Apollo
 
 ## About
 
@@ -12,13 +12,13 @@ Getting up and running is as easy as 1, 2, 3.
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 2. Install your dependencies
-    
+
     ```
-    cd path/to/feathers-crud; npm install
+    cd path/to/feathers-relay; npm install
     ```
 
 3. Start your app
-    
+
     ```
     npm start
     ```
@@ -39,6 +39,14 @@ $ feathers generate hook                  # Generate a new Hook
 $ feathers generate model                 # Generate a new Model
 $ feathers help                           # Show all commands
 ```
+
+## Updating Schema
+
+```
+$ npm run update-schema
+
+```
+
 
 ## Help
 
