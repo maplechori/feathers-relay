@@ -1,0 +1,16 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/feathersCrud",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "LNyjrFabRc5oKWz9XCXCmMHIedXaWsvL035ACvVerYBXOsqV1CC+42MF8LmhBCaAW/wBwFC6mqF/j4vgNkIBDw=="
+    },
+    "local": {
+        "email": "admin@feathersjs.com",
+        "password": "admin"
+      },
+    "successRedirect": "/index.html "
+  }
+}
