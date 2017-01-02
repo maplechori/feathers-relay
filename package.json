@@ -1,7 +1,7 @@
 {
-  "name": "feathers-crud",
-  "description": "Crud for Questions",
-  "version": "0.0.0",
+  "name": "feathers-relay",
+  "description": "Relay SurveyJS",
+  "version": "0.1.0",
   "homepage": "",
   "main": "src/",
   "keywords": [
