@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: './js/app.jsx', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
+  entry: './js/index.jsx', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
   output: {
       path: path.resolve('./public'),
       filename: "bundle.js",
@@ -23,8 +23,12 @@ module.exports = {
           }
       }, // to transform JSX into JS
       {
-          test: /(\.scss|\.css)$/,
-          loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]-[hash:base64:5]!postcss!sass')
+         test: /\.css$/,
+         loader: "style-loader!css-loader"
+       },
+       {
+         test: /\.scss$/,
+         loader: "style-loader!css-loader!sass-loader"
         },
         {
          test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
@@ -48,7 +52,7 @@ module.exports = {
   },
   plugins: [
 
-    new ExtractTextPlugin('bundle.css', { allChunks: true }),
+    //new ExtractTextPlugin('bundle.css', { allChunks: true }),
     //new webpack.HotModuleReplacementPlugin(),
     new BundleTracker({filename: './webpack-stats.json'}),
 
