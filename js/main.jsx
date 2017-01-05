@@ -1,9 +1,7 @@
-
 import React from 'react'
 import Relay from 'react-relay'
-import { Link } from 'react-router';
 
-class AppComponent extends React.Component {
+class MainComponent extends React.Component {
 
   constructor(props) {
     super(props);
@@ -13,17 +11,15 @@ class AppComponent extends React.Component {
   render() {
 
     return (
-      <div>
-
-      <div className="container">
-          {this.props.children}
-      </div>
-    </div>
+        <div className="container">
+            {this.props.children}
+        </div>
     )
   }
 }
 
-const App = Relay.createContainer(AppComponent, {
+
+const Main = Relay.createContainer(MainComponent, {
 
     fragments: {
       viewer: () => Relay.QL`
@@ -35,4 +31,4 @@ const App = Relay.createContainer(AppComponent, {
 });
 
 
-export default App;
+export default Main;

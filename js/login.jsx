@@ -2,6 +2,7 @@ import React from 'react'
 import Relay from 'react-relay'
 
 
+
 class LoginComponent extends React.Component {
 
   constructor(props) {
@@ -10,7 +11,10 @@ class LoginComponent extends React.Component {
 
   render() {
 
-    return (<div>login</div>)
+
+    return (
+      <div>
+      </div>)
   }
 }
 

@@ -1118,9 +1118,9 @@ boom@^4.0.0:
   dependencies:
     hoek "4.x.x"
 
-bootstrap-css@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/bootstrap-css/-/bootstrap-css-3.0.0.tgz#90497fb8acd7e8b1636c4e7b7af155ec79171027"
+bowser@^1.0.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-1.6.0.tgz#37fc387b616cb6aef370dab4d6bd402b74c5c54d"
 
 brace-expansion@^1.0.0:
   version "1.1.6"
@@ -1243,6 +1243,10 @@ chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+change-emitter@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/change-emitter/-/change-emitter-0.1.2.tgz#6b88ca4d5d864e516f913421b11899a860aee8db"
+
 chokidar@^1.0.0, chokidar@^1.4.3:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
@@ -1273,10 +1277,6 @@ class-utils@^0.3.4:
     isobject "^2.0.0"
     lazy-cache "^1.0.3"
     static-extend "^0.1.1"
-
-classnames@^2.2.3:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
 cli@~1.0.0:
   version "1.0.1"
@@ -2169,6 +2169,12 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+formsy-material-ui@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/formsy-material-ui/-/formsy-material-ui-0.5.3.tgz#825c087ee2094218760be139e253bffe3963aa14"
+  dependencies:
+    keycode "^2.1.0"
+
 forwarded@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.0.tgz#19ef9874c4ae1c297bcf078fde63a09b66a84363"
@@ -2448,7 +2454,7 @@ hoek@4.x.x:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.1.0.tgz#4a4557460f69842ed463aa00628cc26d2683afa7"
 
-hoist-non-react-statics@^1.2.0:
+hoist-non-react-statics@^1.0.0, hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
@@ -2497,6 +2503,10 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
+hyphenate-style-name@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
+
 iconv-lite@0.4.13, iconv-lite@~0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
@@ -2541,6 +2551,13 @@ inline-source-map@^0.6.2:
   resolved "https://registry.yarnpkg.com/inline-source-map/-/inline-source-map-0.6.2.tgz#f9393471c18a79d1724f863fa38b586370ade2a5"
   dependencies:
     source-map "~0.5.3"
+
+inline-style-prefixer@^2.0.1:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-2.0.5.tgz#c153c7e88fd84fef5c602e95a8168b2770671fe7"
+  dependencies:
+    bowser "^1.0.0"
+    hyphenate-style-name "^1.0.1"
 
 interpret@^0.6.4:
   version "0.6.6"
@@ -2843,6 +2860,10 @@ kareem@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.1.5.tgz#fd5657d5731cc5901c870f3a448105b40ca7de8a"
 
+keycode@^2.1.0, keycode@^2.1.1:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.1.8.tgz#94d2b7098215eff0e8f9a8931d5a59076c4532fb"
+
 kind-of@^3.0.2, kind-of@^3.0.3:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.1.0.tgz#475d698a5e49ff5e53d14e3e732429dc8bf4cf47"
@@ -2923,10 +2944,6 @@ lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
 
-lodash.isfunction@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.8.tgz#4db709fc81bc4a8fd7127a458a5346c5cdce2c6b"
-
 lodash.isplainobject@^4.0.4:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -2943,7 +2960,7 @@ lodash.merge@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
-lodash.omit@^4.3.0, lodash.omit@^4.4.1, lodash.omit@^4.5.0:
+lodash.omit@^4.3.0, lodash.omit@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
 
@@ -2955,9 +2972,9 @@ lodash.pick@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
 
-lodash.tonumber@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/lodash.tonumber/-/lodash.tonumber-4.0.3.tgz#0b96b31b35672793eb7f5a63ee791f1b9e9025d9"
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
 lodash@3.7.x:
   version "3.7.0"
@@ -2991,6 +3008,22 @@ map-visit@^0.1.5:
   dependencies:
     lazy-cache "^2.0.1"
     object-visit "^0.3.4"
+
+material-ui@^0.16.6:
+  version "0.16.6"
+  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-0.16.6.tgz#683a038c25a6d77e3703a53a4401f3af44bc1db1"
+  dependencies:
+    babel-runtime "^6.11.6"
+    inline-style-prefixer "^2.0.1"
+    keycode "^2.1.1"
+    lodash.merge "^4.6.0"
+    lodash.throttle "^4.1.1"
+    react-addons-create-fragment "^15.0.0"
+    react-addons-transition-group "^15.0.0"
+    react-event-listener "^0.4.0"
+    recompose "^0.21.0"
+    simple-assign "^0.1.0"
+    warning "^3.0.0"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.14"
@@ -3829,11 +3862,19 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
+react-addons-create-fragment@^15.0.0:
+  version "15.4.1"
+  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.4.1.tgz#596fde66cf7f375b5dad3c36ff6efe19c0ac47e7"
+
 react-addons-css-transition-group@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.4.1.tgz#60b133fac5116e4009e56ab0674dc2ddcc1a18f6"
 
-react-addons-transition-group@^15.4.1:
+"react-addons-shallow-compare@^0.14.0 || ^15.0.0":
+  version "15.4.1"
+  resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.4.1.tgz#b68103dd4d13144cb221065f6021de1822bd435a"
+
+react-addons-transition-group@^15.0.0, react-addons-transition-group@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-addons-transition-group/-/react-addons-transition-group-15.4.1.tgz#27d92717089c5e2db202e654a85b76a41b703acc"
 
@@ -3844,6 +3885,13 @@ react-dom@^15.4.1:
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-event-listener@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-event-listener/-/react-event-listener-0.4.0.tgz#26c40ab18f9f0e0d8d1fed9c3465e79c0a99c9a5"
+  dependencies:
+    react-addons-shallow-compare "^0.14.0 || ^15.0.0"
+    warning "^3.0.0"
 
 react-relay@^0.10.0:
   version "0.10.0"
@@ -3884,16 +3932,6 @@ react@^15.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-reactstrap@^3.9.5:
-  version "3.9.5"
-  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-3.9.5.tgz#673485d45754c4be7255f6d907e47100b1d479a7"
-  dependencies:
-    classnames "^2.2.3"
-    lodash.isfunction "^3.0.8"
-    lodash.omit "^4.4.1"
-    lodash.tonumber "^4.0.3"
-    tether "^1.3.4"
-
 readable-stream@1.1:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.13.tgz#f6eef764f514c89e2b9e23146a75ba106756d23e"
@@ -3923,6 +3961,15 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
+
+recompose@^0.21.0:
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.21.2.tgz#ff3fbdb2397b1c77c47d451be2a63b9295d44681"
+  dependencies:
+    change-emitter "^0.1.2"
+    fbjs "^0.8.1"
+    hoist-non-react-statics "^1.0.0"
+    symbol-observable "^1.0.4"
 
 reduce-css-calc@^1.2.6:
   version "1.3.0"
@@ -4191,6 +4238,10 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
+simple-assign@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/simple-assign/-/simple-assign-0.1.0.tgz#17fd3066a5f3d7738f50321bb0f14ca281cc4baa"
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -4455,6 +4506,10 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+symbol-observable@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
 tapable@^0.1.8, tapable@~0.1.8:
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.1.10.tgz#29c35707c2b70e50d07482b5d202e8ed446dafd4"
@@ -4479,10 +4534,6 @@ tar@^2.0.0, tar@~2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
-
-tether@^1.3.4:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.0.tgz#0f9fa171f75bf58485d8149e94799d7ae74d1c1a"
 
 timers-browserify@^2.0.2:
   version "2.0.2"

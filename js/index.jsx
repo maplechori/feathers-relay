@@ -11,12 +11,12 @@ import authentication from 'feathers-authentication/client'
 
 import Relay from 'react-relay'
 import ViewerQueries from './Queries/ViewerQueries'
-import Login from './login'
-import App from './app'
+import Login from './Login'
+import App from './App'
+import Main from './Main'
 
 import { createHashHistory } from 'history';
-import { IndexRoute, Route, Router, applyRouterMiddleware, browserHistory, Link } from 'react-router'
-
+import { IndexRoute, Route, Router, applyRouterMiddleware, browserHistory, Link , hashHistory } from 'react-router'
 
 const host = 'http://localhost:3030';
 
@@ -25,43 +25,36 @@ const socket = io();
 const app = feathers()
   .configure(socketio(socket))
   .configure(hooks())
-  .configure(authentication({
-    storage: window.localStorage
-  }
-));
+  .configure(authentication({ storage: window.localStorage  }));
 
-
-var checkAuth = (nextState, replace) => {
+const checkAuth = (nextState, replace) => {
 
   app.authenticate().then(() => {
-
-      replace({
-        pathname: '/',
-        state: { nextPathName: '/'}
-
-      });
-
+        hashHistory.push('/');
   }).catch(error => {
-
-      if (error.code === 401)
-      {
-        replace({
-          pathname: '/login',
-          state: { nextPathName: '/login'}
-        });
+      if (error.code === 401) {
+       
+        hashHistory.push('/login');
       }
-  })
+  });
 
 }
 
-  ReactDOM.render(
+const logout = () => {
+  app.logout();
+  hashHistory.push('/login');
+}
+
+
+ReactDOM.render(
         <Router
           environment={Relay.Store}
-          history={browserHistory}
+          history={hashHistory}
           render={applyRouterMiddleware(useRelay)}>
           <Route path="/" component={App} queries={ViewerQueries} onEnter={checkAuth}>
+            <IndexRoute component={Main} queries={ViewerQueries}/>
             <Route path='login' component={Login} queries={ViewerQueries}/>
-            <Route path="logout" component={(() => (delete localStorage.token   && null))}/>
+            <Route path="logout" component={(() => logout())}/>
           </Route>
         </Router>,
         document.getElementById('react-app'));
