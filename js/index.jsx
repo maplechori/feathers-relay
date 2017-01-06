@@ -33,7 +33,7 @@ const checkAuth = (nextState, replace) => {
         hashHistory.push('/');
   }).catch(error => {
       if (error.code === 401) {
-       
+
         hashHistory.push('/login');
       }
   });
@@ -42,7 +42,7 @@ const checkAuth = (nextState, replace) => {
 
 const logout = () => {
   app.logout();
-  hashHistory.push('/login');
+  return hashHistory.push('/login');
 }
 
 

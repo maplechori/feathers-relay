@@ -19,12 +19,18 @@ module.exports = {
         loader: 'babel-loader',
         query:
           {
-            presets:[ 'es2015', 'react', 'stage-3',  {"plugins": ["./babelRelayPlugin"], } ]
+            presets:[ 'es2015', 'stage-3', 'stage-1', 'react',   {"plugins": ["./babelRelayPlugin"], } ]
           }
       }, // to transform JSX into JS
       {
+        test: /\.css$/,
+        loader: 'style!css?modules',
+        include: /flexboxgrid/,
+      },
+      {
          test: /\.css$/,
-         loader: "style-loader!css-loader"
+         loader: "style-loader!css-loader",
+         exclude: /flexboxgrid/
        },
        {
          test: /\.scss$/,

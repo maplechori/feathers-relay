@@ -11,6 +11,6 @@
         "email": "admin@feathersjs.com",
         "password": "admin"
       },
-    "successRedirect": "/index.html "
+    "successRedirect": "/"
   }
 }

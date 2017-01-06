@@ -1,7 +1,13 @@
 
 import React from 'react'
 import Relay from 'react-relay'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import { Link } from 'react-router';
+import AppBar from 'material-ui/AppBar'
+
+injectTapEventPlugin();
 
 class AppComponent extends React.Component {
 
@@ -14,11 +20,13 @@ class AppComponent extends React.Component {
 
     return (
       <div>
-
-      <div className="container">
-          {this.props.children}
-      </div>
-    </div>
+        <MuiThemeProvider>
+        <div>
+         <AppBar title={"SurveyJS"}/>
+           {this.props.children}
+        </div>
+      </MuiThemeProvider>
+     </div>
     )
   }
 }
