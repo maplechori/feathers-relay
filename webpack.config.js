@@ -6,10 +6,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
-  entry: './js/index.jsx', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
+  entry:  {
+            main: './js/index.jsx',
+            login: './js/login.jsx'} , // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
   output: {
       path: path.resolve('./public'),
-      filename: "bundle.js",
+      filename: "bundle-[name]-entry.js",
   },
 
   module: {

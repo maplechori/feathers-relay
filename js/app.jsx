@@ -22,7 +22,7 @@ class AppComponent extends React.Component {
       <div>
         <MuiThemeProvider>
         <div>
-         <AppBar title={"SurveyJS"}/>
+         <AppBar showMenuIconButton={this.props.viewer ? true : false} title={"SurveyJS"}/>
            {this.props.children}
         </div>
       </MuiThemeProvider>

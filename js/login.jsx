@@ -4,6 +4,11 @@ import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 import Card from 'material-ui/Card'
 import { CardHeader } from 'material-ui/Card'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import ReactDOM from 'react-dom'
 
 import T from './Languages/english.js'
 import './login.styl'
@@ -15,8 +20,9 @@ const loginCardHeaderStyle = {
   fontSize: '18px'
 }
 
+injectTapEventPlugin();
 
-class LoginComponent extends React.Component {
+class Login extends React.Component {
 
   constructor(props) {
     super(props);
@@ -25,6 +31,10 @@ class LoginComponent extends React.Component {
   render() {
 
     return (
+        <MuiThemeProvider>
+          <div>
+
+          <AppBar showMenuIconButton={false} title={"SurveyJS"}/>
       <div className="login-page">
         <div className="login-form">
           <form autoComplete="off" method="post" action="/auth/local">
@@ -40,18 +50,10 @@ class LoginComponent extends React.Component {
           </Card>
           </form>
         </div>
-      </div>)
+      </div>
+    </div>
+      </MuiThemeProvider>)
   }
 }
 
-const Login = Relay.createContainer(LoginComponent, {
-    fragments: {
-      viewer: () => Relay.QL`
-            fragment on Respondent {
-              _id
-            }`
-    }
-});
-
-
-export default Login;
+ReactDOM.render(<Login/>, document.getElementById('react-app'));

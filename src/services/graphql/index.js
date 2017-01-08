@@ -19,6 +19,7 @@ module.exports = function () {
   // Initialize our service with any options it requires
   app.use('/graphql', apolloExpress((req) => {
     let {token, provider} = req.feathers;
+    console.log('query of GraphQL', req.feathers);
     return {
       schema: executableSchema,
       context: {
@@ -26,6 +27,7 @@ module.exports = function () {
         provider
       }
     }
+
   }));
 
   app.use('/graphiql', graphiqlExpress({
