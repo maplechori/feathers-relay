@@ -33,26 +33,25 @@ class Login extends React.Component {
     return (
         <MuiThemeProvider>
           <div>
-
-          <AppBar showMenuIconButton={false} title={"SurveyJS"}/>
-      <div className="login-page">
-        <div className="login-form">
-          <form autoComplete="off" method="post" action="/auth/local">
-          <Card className="login-card">
-            <CardHeader title={<T.span text={{key: "loginInstructions"}}/>} titleStyle={loginCardHeaderStyle}/>
-            <div className="login-group">
-                <TextField className="login-text" name="email" hintText={<T.span text={{key: "username"}}/>} fullWidth={true}/>
+            <AppBar showMenuIconButton={false} title={"SurveyJS"}/>
+              <div className="login-page">
+                <div className="login-form">
+                  <form autoComplete="off" method="post" action="/auth/local">
+                  <Card className="login-card">
+                    <CardHeader title={<T.span text={{key: "loginInstructions"}}/>} titleStyle={loginCardHeaderStyle}/>
+                    <div className="login-group">
+                        <TextField className="login-text" name="email" hintText={<T.span text={{key: "username"}}/>} fullWidth={true}/>
+                    </div>
+                    <div className="login-group">
+                      <TextField className="login-text" name="password" type="password" hintText="Password" fullWidth={true}/>
+                    </div>
+                    <RaisedButton label="Login" type="submit" fullWidth={true} primary={true}/>
+                  </Card>
+                  </form>
+                </div>
+              </div>
             </div>
-            <div className="login-group">
-              <TextField className="login-text" name="password" type="password" hintText="Password" fullWidth={true}/>
-            </div>
-            <RaisedButton label="Login" type="submit" fullWidth={true} primary={true}/>
-          </Card>
-          </form>
-        </div>
-      </div>
-    </div>
-      </MuiThemeProvider>)
+        </MuiThemeProvider>)
   }
 }
 

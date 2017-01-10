@@ -7,6 +7,7 @@ const hooks = require('./hooks');
 module.exports = function() {
   const app = this;
 
+
   const options = {
     Model: user,
     paginate: {

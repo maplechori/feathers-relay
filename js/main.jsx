@@ -13,6 +13,7 @@ class MainComponent extends React.Component {
     return (
         <div className="container">
             {this.props.children}
+            {console.log(this.props)}
         </div>
     )
   }
@@ -22,8 +23,8 @@ class MainComponent extends React.Component {
 const Main = Relay.createContainer(MainComponent, {
 
     fragments: {
-      viewer: () => Relay.QL`
-          fragment on Respondent {
+      respondent: () => Relay.QL`
+          fragment on User {
               _id
           }
       `

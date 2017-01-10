@@ -12,6 +12,14 @@ const Date = new GraphQLScalarType({
 const typeDefinitions = `
   scalar Date
 
+  type User {
+    _id: String!
+    firstName: String
+    lastName: String
+    email: String!
+  }
+
+
   type Respondent {
       _id: String!
       loginCode: String
@@ -96,12 +104,12 @@ const typeDefinitions = `
 
 
   type RootQuery {
-    viewer: Respondent
+    respondent: User
   }
 
   type AuthPayload {
     token: String # JSON Web Token
-    data: Respondent
+    data: User
   }
 
   type RootMutation {

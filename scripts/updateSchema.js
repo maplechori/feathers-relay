@@ -18,13 +18,15 @@ const executableSchema = makeExecutableSchema({
 
   var result = await (graphql(executableSchema, introspectionQuery));
 
-  console.log(result);
+
   if (result.errors) {
       console.error(
         'ERROR introspecting schema: ',
         JSON.stringify(result.errors, null, 2)
       );
     } else {
+
+      console.log(printSchema(executableSchema));
 
       fs.writeFileSync(
         path.join(__dirname, '../data/schema.json'),

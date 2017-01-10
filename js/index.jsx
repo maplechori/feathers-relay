@@ -31,7 +31,6 @@ const app = feathers()
   app.authenticate().then(() => {
 
 
-      console.log('here1');
     Relay.injectNetworkLayer(
       new Relay.DefaultNetworkLayer( 'http://localhost:3030/graphql', {
        headers: {

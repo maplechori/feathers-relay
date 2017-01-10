@@ -34,9 +34,9 @@ class AppComponent extends React.Component {
 const App = Relay.createContainer(AppComponent, {
 
     fragments: {
-      viewer: () => Relay.QL`
-          fragment on Respondent {
-              _id
+      respondent: () => Relay.QL`
+          fragment on User {
+             _id
           }
       `
     }

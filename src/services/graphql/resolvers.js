@@ -6,10 +6,9 @@ import request from 'request-promise'
 export default function Resolvers() {
   let app = this;
 
+
   let Question = app.service('question');
   let Respondent = app.service('respondent');
-
-  console.log(Respondent);
 
   const localRequest = request.defaults({
       baseUrl: `http://${app.get('host')}:${app.get('port')}`,
@@ -19,7 +18,10 @@ export default function Resolvers() {
 
   return {
     RootQuery: {
-
+      respondent(root, args, context) {
+        console.log('x', Respondent);
+        return Respondent.find(context);
+      }
     },
     RootMutation: {
 
