@@ -1,0 +1,17 @@
+#main {
+  $width: 5em !global;
+  width: $width;
+}
+
+#sidebar {
+  width: $width;
+}
+
+
+.container-surveys {
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+ 
