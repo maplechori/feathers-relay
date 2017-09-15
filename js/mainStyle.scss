@@ -7,11 +7,21 @@
   width: $width;
 }
 
-
 .container-surveys {
-  border: 1px solid black;
-  width: 100%;
+  border: 2px dashed rgb(0, 188, 212);
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 80%;
+  height: 600px;
   height: auto;
   display: flex;
 }
- 
+
+.floating-action {
+  margin: 0;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+}

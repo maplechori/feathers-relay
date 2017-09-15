@@ -7,6 +7,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: __dirname,
   entry:  {
+           dev: 'webpack-dev-server/client?http://0.0.0.0:2000', // WebpackDevServer host and port
+            hot: 'webpack/hot/only-dev-server', //
             main: './js/index.jsx',
             login: './js/login.jsx'} , // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
   output: {
@@ -45,6 +47,9 @@ module.exports = {
        { test: /\.styl$/,
          loader: 'style-loader!css-loader!stylus-loader'
        },
+       { test: /\.json$/,
+         loader: 'json-loader'
+       },
 
     ],
   },
@@ -63,6 +68,7 @@ module.exports = {
     //new ExtractTextPlugin('bundle.css', { allChunks: true }),
     //new webpack.HotModuleReplacementPlugin(),
     new BundleTracker({filename: './webpack-stats.json'}),
+    new webpack.HotModuleReplacementPlugin()
 
    ]
 }

@@ -12,12 +12,11 @@ import authentication from 'feathers-authentication/client'
 import Relay from 'react-relay'
 import ViewerQueries from './Queries/ViewerQueries'
 import App from './App'
-import Main from './Main'
+import Main from './main'
 
 import { createHashHistory } from 'history';
 import { IndexRoute, Route, Router, applyRouterMiddleware, browserHistory, Link , hashHistory } from 'react-router'
 import { RelayNetworkLayer, authMiddleware, urlMiddleware } from 'react-relay-network-layer';
-
 
 const host = 'http://localhost:3030';
 
@@ -30,7 +29,6 @@ const app = feathers()
 
   app.authenticate().then(() => {
 
-
     Relay.injectNetworkLayer(
       new Relay.DefaultNetworkLayer( 'http://localhost:3030/graphql', {
        headers: {
@@ -39,15 +37,14 @@ const app = feathers()
      })
     );
 
-
     ReactDOM.render(
             <Router
               environment={Relay.Store}
               history={hashHistory}
               render={applyRouterMiddleware(useRelay)}>
               <Route path="/" component={App} queries={ViewerQueries}>
-                <IndexRoute component={Main} queries={ViewerQueries}/>
-                <Route path="logout" component={(() => logout())}/>
+              <IndexRoute component={Main} queries={ViewerQueries}/>
+              <Route path="logout" component={(() => logout())}/>
               </Route>
             </Router>,
             document.getElementById('react-app'));
@@ -64,3 +61,4 @@ const logout = () => {
   app.logout();
   window.location.href='/login.html'
 }
+  

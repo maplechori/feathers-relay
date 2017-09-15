@@ -22,7 +22,7 @@ class AppComponent extends React.Component {
       <div>
         <MuiThemeProvider>
         <div>
-         <AppBar showMenuIconButton={this.props.viewer ? true : false} title={"SurveyJS"}/>
+         <AppBar showMenuIconButton={this.props.respondent ? true : false} title={"SurveyJS"}/>
            {this.props.children}
         </div>
       </MuiThemeProvider>
@@ -31,7 +31,7 @@ class AppComponent extends React.Component {
   }
 }
 
-const App = Relay.createContainer(AppComponent, {
+export default Relay.createContainer(AppComponent, {
 
     fragments: {
       respondent: () => Relay.QL`
@@ -41,6 +41,3 @@ const App = Relay.createContainer(AppComponent, {
       `
     }
 });
-
-
-export default App;

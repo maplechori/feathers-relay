@@ -19,7 +19,6 @@ export default function Resolvers() {
   return {
     RootQuery: {
       respondent(root, args, context) {
-        console.log('x', Respondent);
         return Respondent.find(context);
       }
     },

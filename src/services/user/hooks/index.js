@@ -10,7 +10,7 @@ exports.before = {
 
   ],
   get: [
-   
+
   ],
   create: [
     auth.hashPassword()

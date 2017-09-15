@@ -1,0 +1,27 @@
+{
+  "schema": {
+    "type": "object",
+    "title": "Types",
+    "properties": {
+      "string":  {
+        "type": "string",
+        "minLength": 3
+      },
+      "anotherstring":  {
+        "type": "string",
+        "minLength": 3
+      },
+      "comment": {
+        "title": "Comment",
+        "type": "string",
+        "maxLength": 20,
+        "validationMessage": "Don't be greedy!",
+        "description": "Please write your comment here."
+      }
+    },
+    "required": ["comment"]
+  },
+  "form": [
+    "*"
+  ]
+}

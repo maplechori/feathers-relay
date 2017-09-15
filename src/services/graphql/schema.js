@@ -10,58 +10,66 @@ const Date = new GraphQLScalarType({
 
 
 const typeDefinitions = `
-  scalar Date
+    scalar Date
 
-  type User {
-    _id: String!
+
+  type SMSRespondentInfo {
+    address1: String
+    address2: String
+    zip: String
+    city: String
+    telephone1: String
+    telephone2: String
+    age: Int
+    sex: Int
     firstName: String
     lastName: String
-    email: String!
+    householdId: Int
+    householdOrder: Int
+    householdHead: Int
+    selected: Boolean
+    present: Boolean
+    financial: Boolean
+    family: Boolean
+    coverscreen: Boolean
+    birthdate: String
+    info: String
+    puid: Int
+    remarks: [SMSRemarks]
+    contacts: [SMSContacts]
+    email: String
   }
 
-
-  type Respondent {
-      _id: String!
-      loginCode: String
-      firstName: String
-      lastName: String
-      address1: String
-      address2: String
-      zip: String
-      city: String
-      longitude: String
-      latitude: String
-      email: String
-      telephone1: String
-      telephone2: String
-      householdId: Int
-      householdOrder: Int
-      householdHead: Int
-      status: Int
-      remarks: [Remarks]
-      contacts: [Contacts]
-      info: String
-      puid: Int
-      selected: Boolean
-      present: Boolean
-      financial: Boolean
-      family: Boolean
-      coverscreen: Boolean
-      sex: Int
-      age: Int
-      birthdate: String
-  }
-
-  type Remarks {
+  type SMSRemarks {
       _id: String!
       date: Date
       message: String
   }
 
-  type Contacts {
+  type SMSContacts {
      date: Date
      refusal: Boolean
      finalCode: Boolean
+  }
+
+  type User {
+    _id: String!
+    loginCode: String
+    info: SMSRespondentInfo
+    longitude: String
+    latitude: String
+    ip: String
+    status: Int
+  }
+
+  type Respondent {
+      _id: String!
+      loginCode: String
+      info: SMSRespondentInfo
+      longitude: String
+      latitude: String
+      ip: String
+      status: Int
   }
 
 

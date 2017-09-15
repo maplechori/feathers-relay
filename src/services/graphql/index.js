@@ -1,7 +1,6 @@
 // src/services/graphql/index.js
 'use strict';
 
-const hooks = require('./hooks');
 import { apolloExpress, graphiqlExpress } from 'apollo-server';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
 import Resolvers from  './resolvers';
